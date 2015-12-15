@@ -1,0 +1,488 @@
+/*********************************************************************
+*
+*  Initial module!
+*
+*  This module is not responsible for styles,
+*  It serves only to import other modules,
+*  starting the project.
+*
+*  If your site is SPA (Single Page Application),
+*  use only the main.scss or main.sass
+*
+*  If a project with multiple pages, create more .css or .sass
+*  for each page. Examples include the about.html page so let's
+*  create about.scss or about.sass Within these modules you import
+*  the required modules for the page. Do not set styles on them.
+*
+*  So you do not overload the css with extra weight
+*
+*  The sass files are compiled at runtime and automatically
+*  created in the folder css/
+*
+*  The vendors folder there are some libraries that usually use,
+*  be my guest if you want or it does not matter.
+*
+* The css modularization is up to you, if you like smacss, bem,
+* oocss, drycss feel free to change and use as it sees best.
+* For some time I adopted my modularization involving some smacss.
+*
+*********************************************************************/
+/*  Syntax Quick Reference
+  --------------------------
+  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
+  span($ratio: 1, $offset: 0)
+  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
+  unshift()
+  edit()
+  center($max_width: 1410px, $pad: 0)
+  stack($pad: 0, $align: false)
+  unstack()
+  align($direction: both)
+  cf()
+*/
+/**
+ * Grid settings.
+ * All values are defaults and can therefore be easily overidden.
+ */
+/**
+ * List functions courtesy of the wonderful folks at Team Sass.
+ * Check out their awesome grid: Singularity.
+ */
+/**
+ * Get  percentage from a given ratio.
+ * @param {number} [$ratio=1] - The column ratio of the element.
+ * @returns {number} - The percentage value.
+ */
+/**
+ * Work out the column widths based on the ratio and gutter sizes.
+ * @param {number} [$ratios=1] - The column ratio of the element.
+ * @param {number} [$gutter=$jeet-gutter] - The gutter for the column.
+ * @returns {list} $width $gutter - A list containing the with and gutter for the element.
+ */
+/**
+ * Get the set layout direction for the project.
+ * @returns {string} $direction - The layout direction.
+ */
+/**
+ * Replace a specified list value with a new value (uses built in set-nth() if available)
+ * @param {list} $list - The list of values you want to alter.
+ * @param {number} $index - The index of the list item you want to replace.
+ * @param {*} $value - The value you want to replace $index with.
+ * @returns {list} $list - The list with the value replaced or removed.
+ * @warn if an invalid index is supplied.
+ */
+/**
+ * Reverse a list (progressively enhanced for Sass 3.3)
+ * @param {list} $list - The list of values you want to reverse.
+ * @returns {list} $result - The reversed list.
+ */
+/**
+ * Get the opposite direction to a given value.
+ * @param {string} $dir - The direction you want the opposite of.
+ * @returns {string} - The opposite direction to $dir.
+ * @warn if an incorrect string is provided.
+ */
+/**
+ * Perform a value into a percentage value.
+ * @param {number} $value - The value which should be converted.
+ * @returns {number} $value - The percentage.
+ */
+/**
+ * Style an element as a column with a gutter.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$offset=0] - A offset specified as a fraction (see $ratios).
+ * @param {number} [$cycle=0] - Easily create an nth column grid where $cycle equals the number of columns.
+ * @param {number} [$uncycle=0] - Undo a previous cycle value to allow for a new one.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * Aliases for j-column().
+ */
+/**
+ * Get the width of a column and nothing else.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * Aliases for j-column-width().
+ */
+/**
+ * Get the gutter size of a column and nothing else.
+ * @param {number} [ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [gutter=jeet.gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * Alias for j-column-gutter().
+ */
+/**
+ * Style an element as a column without any gutters for a seamless row.
+ * @param {number} [$ratios=1] - A width relative to its container as a fraction.
+ * @param {number} [$offset=0] - A offset specified as a fraction (see $ratios).
+ * @param {number} [cycle=0] - Easily create an nth column grid where cycle equals the number of columns.
+ * @param {number} [uncycle=0] - Undo a previous cycle value to allow for a new one.
+ */
+/**
+ * Alias for j-span().
+ */
+/**
+ * Reorder columns without altering the HTML.
+ * @param {number} [$ratios=0] - Specify how far along you want the element to move.
+ * @param {string} [$col-or-span=column] - Specify whether the element has a gutter or not.
+ * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
+ */
+/**
+ * Alias for j-shift().
+ */
+/**
+ * Reset an element that has had shift() applied to it.
+ */
+/**
+ * Alias for j-unshift().
+ */
+/**
+ * View the grid and its layers for easy debugging.
+ * @param {string} [$color=black] - The background tint applied.
+ * @param {boolean} [$important=false] - Whether to apply the style as !important.
+ */
+/**
+ * Aliases for j-edit().
+ */
+/**
+ * Horizontally center an element.
+ * @param {number} [$max-width=1410px] - The max width the element can be.
+ * @param {number} [$pad=0] - Specify the element's left and right padding.
+ */
+/**
+ * Alias for j-center().
+ */
+/**
+ * Uncenter an element.
+ */
+/**
+ * Alias for j-uncenter().
+ */
+/**
+ * Stack an element so that nothing is either side of it.
+ * @param {number} [$pad=0] - Specify the element's left and right padding.
+ * @param {boolean/string} [$align=false] - Specify the text align for the element.
+ */
+/**
+ * Alias for j-stack().
+ */
+/**
+ * Unstack an element.
+ */
+/**
+ * Alias for j-unstack().
+ */
+/**
+ * Center an element on either or both axes.
+ * @requires A parent container with relative positioning.
+ * @param {string} [$direction=both] - Specify which axes to center the element on.
+ */
+/**
+ * Alias for j-align().
+ */
+/**
+ * Apply a clearfix to an element.
+ */
+/**
+ * Alias for j-cf().
+ */
+/*********************************************************************
+*
+*  Module functions
+*
+*  If a function created in your project here
+*  document use.
+*
+*  Note:
+*  Using the vendor Bourbon functions decreased.
+*  Before you create a function, see the documentation for
+*  Bourbon and see if it already exists. (http://bourbon.io/docs/)
+*  When you create a function, be sure to update other
+*  projects even collaborate on this project.
+*
+*********************************************************************/
+/*********************************************************************
+*
+*  Mixins module
+*
+*  Set here your mixins, which helps save
+*  your time, stop typing so much and prefixes.
+*
+*  Note:
+*  Using the vendor Bourbon mixins decreased.
+*  Before creating a mixin, see the documentation for
+*  Bourbonand see if it already exists. (http://bourbon.io/docs/)
+*  When creating a mixin, be sure to update other
+*  projects even collaborate on this project.
+*
+*********************************************************************/
+/*******************************************************************
+*  =Mixin Opacity
+*
+*   Give opacity elements
+*
+*   Use:
+*   .faded-text {
+*       @include opacity(0.8);
+*   }
+*
+*********************************************************************/
+/*******************************************************************
+*  =Mixin Shadow
+*
+*   Add some shadow box
+*
+*   use:
+*   .faded-text {
+*       @include box-shadow(0px, 8px, 10px, rgba(172, 170, 170, 0.75));
+*   }
+*
+*********************************************************************/
+/*********************************************************************
+*
+*
+* Generic module
+*
+*  This module is to optimize your time if you see that a
+*  class ends up being widely used to create inside
+*
+*  Exercise caution when using in projects and remember to use only
+*  placeholder (%) not to increase the number of rows in your project
+*
+*    Use:
+*
+*   .myClass {
+*        @extend %display-block, %bold, %text-justify;
+*   }
+*
+*   Note:
+*   Use consciously
+*
+*********************************************************************/
+/*********************************************************************
+*   FONTS AND LINKS
+**********************************************************************/
+/*********************************************************************
+*   DISPLAY
+**********************************************************************/
+/*********************************************************************
+*   IMG
+**********************************************************************/
+/*********************************************************************
+*   SIZE
+**********************************************************************/
+/*********************************************************************
+*
+*  Variables module
+*
+*  Set all the variables that are to be used in the project
+*  this module.
+*  Third-party vendors or created exceptions components
+*  to be independent.
+*
+*********************************************************************/
+/*******************************************************************
+*  =Dimension
+*********************************************************************/
+/*********************************************************************
+*  =Colors
+*********************************************************************/
+/*********************************************************************
+*  =Font-size
+*********************************************************************/
+/*******************************************************************
+*  =Dimension Responsive Design
+*********************************************************************/
+/*********************************************************************
+*
+*  Basic module
+*
+*
+*  This module defines the basic values of tags
+*  here is not used, class, id just dials tags.
+*
+*
+*********************************************************************/
+body,
+html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  min-height: 100%;
+  font-size: 16px;
+  font-size: 100%;
+  /* flexible baseline */
+  box-sizing: border-box; }
+
+body {
+  height: 100%; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address {
+  margin: 0;
+  padding: 0; }
+
+ul,
+ol,
+ul li,
+ol li {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+a, a:hover {
+  text-decoration: none; }
+
+fieldset {
+  border: none; }
+
+address {
+  font-style: normal; }
+
+/*********************************************************************
+*
+*  Typography Module
+*
+*  This module is set every typography design.
+*  Sizes, colors should be defined in Variables.
+*  Does not define typography for tags, use class.
+*
+*
+*********************************************************************/
+/*********************************************************************
+*
+*  Scaffolding module
+*
+*  This module is a module that grows
+*  as your project grows,
+*  here are used helper classes that can
+*  It is used at various stages of the project
+*
+*
+*********************************************************************/
+@media (min-width: 768px) {
+  .container {
+    width: auto;
+    max-width: 750px;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0; } }
+
+@media (min-width: 998px) {
+  .container {
+    width: auto;
+    max-width: 980px;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0; } }
+
+@media (min-width: 1170px) {
+  .container {
+    width: auto;
+    max-width: 1170px;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0; } }
+
+.container:before, .container:after {
+  content: " ";
+  display: table; }
+
+.container:after {
+  clear: both; }
+
+/*********************************************************************
+*
+*  When creating sprites
+*  Use this module to configure the sprites
+*  and classes to set the position
+*
+*********************************************************************/
+/*********************************************************************
+*
+*  Header Module
+*
+*  Set the styles of your header here, the menus
+*  set in _nav.css.
+*
+*
+*********************************************************************/
+/* Media Queries use. Mobile First.
+
+   @include breakpoint($mobile) {
+
+   }
+   @include breakpoint($tablets) {
+
+   }
+   @include breakpoint($desktop-old) {
+
+   }
+   @include breakpoint($desktop-modern) {
+
+   }
+*/
+/*********************************************************************
+*
+*  Footer module
+*
+*  Defines your footer styles here.
+*
+*
+*********************************************************************/
+/* Media Queries use. Mobile First.
+
+   @include breakpoint($mobile) {
+
+   }
+   @include breakpoint($tablets) {
+
+   }
+   @include breakpoint($desktop-old) {
+
+   }
+   @include breakpoint($desktop-modern) {
+
+   }
+*/
+/*********************************************************************
+*
+*  Nav module(menu)
+*
+*  Set your menu styles here.
+*
+*
+*********************************************************************/
+/* Media Queries use. Mobile First.
+
+   @include breakpoint($mobile) {
+
+   }
+   @include breakpoint($tablets) {
+
+   }
+   @include breakpoint($desktop-old) {
+
+   }
+   @include breakpoint($desktop-modern) {
+
+   }
+*/

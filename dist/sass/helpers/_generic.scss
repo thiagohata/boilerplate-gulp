@@ -1,0 +1,92 @@
+/*********************************************************************
+*
+*
+* Generic module
+*
+*  This module is to optimize your time if you see that a
+*  class ends up being widely used to create inside
+*
+*  Exercise caution when using in projects and remember to use only
+*  placeholder (%) not to increase the number of rows in your project
+*
+*    Use:
+*
+*   .myClass {
+*        @extend %display-block, %bold, %text-justify;
+*   }
+*
+*   Note:
+*   Use consciously
+*
+*********************************************************************/
+
+
+/*********************************************************************
+*   FONTS AND LINKS
+**********************************************************************/
+
+%bold { font-weight: bold; }
+
+%italic { font-style: italic; }
+
+%uppercase { text-transform: uppercase; }
+
+%no-style {text-decoration: none; }
+
+%underline { text-decoration: underline; }
+
+%text-left { text-align: left;}
+
+%text-center { text-align: center;}
+
+%text-right { text-align: right; }
+
+%text-justify { text-align: justify; }
+
+
+/*********************************************************************
+*   DISPLAY
+**********************************************************************/
+
+%display-block { display: block; }
+
+%display-inline-block { display: inline-block; }
+
+%displa-inline {display: inline; }
+
+%display-none { display: none; }
+
+
+/*********************************************************************
+*   IMG
+**********************************************************************/
+
+%img-replacement {
+   text-indent: -999px;
+   overflow: hidden;
+}
+
+%resize-image{
+  width: 100%;
+  height: auto;
+}
+
+
+/*********************************************************************
+*   SIZE
+**********************************************************************/
+
+%section-full{
+   @extend %display-block;
+   width: 100%;
+   min-height: 100%;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+{
+  "name": "boilerplate-gulp",
+  "description": "Boilerplate using Gulp for start projects for web",
+  "main": "main.js",
+  "authors": [
+    "thiagohata"
+  ],
+  "license": "ISC",
+  "moduleType": [
+    "globals"
+  ],
+  "homepage": "",
+  "private": true,
+  "devDependencies": {
+    "modernizer": "~2.8.2",
+    "bootstrap-sass": "bootstrap-sass-official#~3.3.6",
+    "jquery": "1.11.3",
+    "underscore": "~1.8.3",
+    "angular": "1.4.8",
+    "angular-resource": "~1.4.8",
+    "angular-route": "~1.4.8",
+    "angular-cookies": "~1.4.8",
+    "angular-animate": "~1.4.8",
+    "angular-touch": "~1.4.8",
+    "Materialize": "materialize#~0.97.3",
+    "jasmine": "https://github.com/jasmine/jasmine/releases/download/v2.3.4/jasmine-standalone-2.3.4.zip",
+    "mocha": "~2.3.4",
+    "qunit": "~1.20.0",
+    "angular-material": "~1.0.0"
+  },
+  "dependencies": {}
+}

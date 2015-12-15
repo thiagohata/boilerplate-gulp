@@ -1,0 +1,52 @@
+/*********************************************************************
+*
+*  Mixins module
+*
+*  Set here your mixins, which helps save
+*  your time, stop typing so much and prefixes.
+*
+*  Note:
+*  Using the vendor Bourbon mixins decreased.
+*  Before creating a mixin, see the documentation for
+*  Bourbonand see if it already exists. (http://bourbon.io/docs/)
+*  When creating a mixin, be sure to update other
+*  projects even collaborate on this project.
+*
+*********************************************************************/
+
+
+/*******************************************************************
+*  =Mixin Opacity
+*
+*   Give opacity elements
+*
+*   Use:
+*   .faded-text {
+*       @include opacity(0.8);
+*   }
+*
+*********************************************************************/
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+/*******************************************************************
+*  =Mixin Shadow
+*
+*   Add some shadow box
+*
+*   use:
+*   .faded-text {
+*       @include box-shadow(0px, 8px, 10px, rgba(172, 170, 170, 0.75));
+*   }
+*
+*********************************************************************/
+
+@mixin box-shadow($hshadow, $vshadow, $blur, $color){
+   box-shadow: $hshadow $vshadow $blur $color;
+   -moz-box-shadow: $hshadow $vshadow $blur $color;
+   -webkit-box-shadow: $hshadow $vshadow $blur $color;
+}

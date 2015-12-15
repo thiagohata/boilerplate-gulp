@@ -1,0 +1,62 @@
+/*********************************************************************
+*
+*  Initial module!
+*
+*  This module is not responsible for styles,
+*  It serves only to import other modules,
+*  starting the project.
+*
+*  If your site is SPA (Single Page Application),
+*  use only the main.scss or main.sass
+*
+*  If a project with multiple pages, create more .css or .sass
+*  for each page. Examples include the about.html page so let's
+*  create about.scss or about.sass Within these modules you import
+*  the required modules for the page. Do not set styles on them.
+*
+*  So you do not overload the css with extra weight
+*
+*  The sass files are compiled at runtime and automatically
+*  created in the folder css/
+*
+*  The vendors folder there are some libraries that usually use,
+*  be my guest if you want or it does not matter.
+*
+* The css modularization is up to you, if you like smacss, bem,
+* oocss, drycss feel free to change and use as it sees best.
+* For some time I adopted my modularization involving some smacss.
+*
+*********************************************************************/
+
+//Vendors (JeetGrid, Bourbon)
+
+@import "vendors/jeet/index";       //Grids
+@import "vendors/bourbon/bourbon"; //Bourbon A Sass Mixin Library
+@import "vendors/breakpoint";     // Breakpoint, Responsive Design
+//@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss"; //Bootstrap
+//@import "../../bower_components/Materialize/sass/_materialize.scss";
+
+
+//HELPERSs
+@import "helpers/functions";
+@import "helpers/mixins";
+@import "helpers/generic";
+
+//BASE
+@import "base/variables";
+@import "base/basic";
+@import "base/typography";
+@import "base/scaffolding";
+
+//COMPONENTS
+@import "components/sprite";
+
+//LAYOUT
+@import "layout/header";
+@import "layout/footer";
+@import "layout/nav";
+
+
+
+
+
