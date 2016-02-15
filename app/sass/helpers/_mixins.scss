@@ -50,3 +50,60 @@
    -moz-box-shadow: $hshadow $vshadow $blur $color;
    -webkit-box-shadow: $hshadow $vshadow $blur $color;
 }
+
+
+/*******************************************************************
+*  =Mixin Center Object
+*
+*   Center Object with position absolute
+*
+*   use:
+*   .box {
+*     $width: 600px;
+*     $height: 300px;
+*     @include centered($width, $height);
+*   }
+*
+*********************************************************************/
+
+@mixin centered($width: null, $height: null){
+    position: absolute;
+    top: 50%; left: 50%;
+
+    @if not $widht and not $height {
+        transform: translate(-50%, -50%);
+    } @else if not $width {
+        margin-top: -($height/2);
+        transform: translateX(-50%);
+        height: $height;
+    } @else if not $height {
+        margin-left: -($width/2);
+        transform: translateY(-50%);
+        width: $width;
+    } @else if $width and $height {
+        margin-top: -($height/2);
+        margin-left: -($width/2);
+        height: $height;
+        width: $width;
+    }
+}
+
+
+/*******************************************************************
+*  =Mixin Placeholder
+*
+*   Style Placeholder cross browser
+*
+*   use:
+*   .form-control {
+*     $color: #ededed !default;
+*     @include placeholder($color);
+*   }
+*
+*********************************************************************/
+
+@mixin placeholder($color) {
+    &::-moz-placeholder { color: $color; opacity: 1; }
+    &:-ms-input-placeholder { color: $color; }
+    &::-webkit-input-placeholder  { color: $color; }
+}

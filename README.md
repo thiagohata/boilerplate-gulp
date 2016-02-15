@@ -20,7 +20,7 @@ O que precisa para rodar
 - [Git](https://git-scm.com/)
 - [Ruby](https://www.ruby-lang.org/pt/)
 - [Node.js](https://nodejs.org/)
-- [NPM](https://www.npmjs.com/) 
+- [NPM Atualizado](https://www.npmjs.com/) 
 - [Bower](http://bower.io/)
 - [Gulp](http://gulpjs.com/)
 - [Sass](http://sass-lang.com/)
@@ -44,19 +44,18 @@ Pensando que já tem as depedências instaladas na máquina.
 
 5 - Para gerar os arquivos (concatenados, minificados e otimizados )
 	
-	$ grunt
+	$ gulp
 	
-6 - Caso não queira os html's minificados
+6 - Caso queira js e css(concatenados, minificados e otimizados) mas não queira os html's minificados
 	
-	$ grunt	deploy
+	$ gulp	deploy
 
 
 ## Como foi desenvolvido esse Boilerplate.
 
 Criei esse bolierplate para startar projetos que utilizo para web e SPA. 
 
-Depois de usar muitos Boilerplate /scaffolding  prontos por ai, algumas vezes faltavam coisas ou as vezes tinham muita coisa, resolvi fazer um Boilerplate rápido que atendesse as necessidades básicas
-de um projeto.
+Depois de usar muitos Boilerplate /scaffolding  prontos por ai, algumas vezes faltavam coisas ou as vezes tinham muita coisa, resolvi fazer um Boilerplate rápido que atendesse as necessidades básicas de um projeto.
 
 
 ## Bibliotecas
