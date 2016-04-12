@@ -80,6 +80,8 @@ gulp.task('deploy', ['copyFilesDist'], function(){
 var filesDelete = [
                  './dist/js/**/*.js'
                 ,'./dist/css/**/*.css'
+                ,'./dist/sass/**/*.scss'
+                ,'./dist/sass/'
                 ,'!./dist/js/**/*.min.js'
                 ,'!./dist/css/**/*.min.css'
                 ];
@@ -148,11 +150,14 @@ gulp.task('optimazeImages', function(){
 **********************************************************************/
 
 gulp.task('sass', function() {
-    return gulp.src([files.app +  'sass/**/*.scss', files.app +  'sass/**/*.sass' ])
+    return gulp.src([files.app +  'sass/**/*.scss'
+                    ,files.app +  'sass/**/*.sass'])
         .pipe(sass.sync().on('error', sass.logError))
         .pipe(gulp.dest(files.app + 'css'))
         .pipe(browserSync.stream());
+
 });
+
 
 /*********************************************************************
 *   Task Server
@@ -178,10 +183,15 @@ gulp.task('server', ['sass'], function(){
    //       .pipe(csslint())
    //       .pipe(csslint.reporter());
    // });
-    gulp.watch([files.app +  'sass/**/*.scss', files.app +  'sass/**/*.sass'], ['sass']);
-    gulp.watch(files.app + '**/*').on('change', browserSync.reload);
-});
 
+
+    gulp.watch([files.app + 'sass/**/*.scss'
+               ,files.app + 'sass/**/*.sass']
+               ,['sass']);
+
+    gulp.watch(files.app + '/**/*').on('change', browserSync.reload);
+
+});
 
 
 
